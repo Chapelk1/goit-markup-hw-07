@@ -58,6 +58,11 @@
             </li>
           </ul>
         </address>
+        <button class="menu-btn js-open-menu" >
+          <svg class="icon-menu">
+            <use class="icon-charm" href="./images/icons.svg#icon-charm"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -354,7 +359,7 @@
       </section>
     </main>
     <!-- footer -->
-    <footer class="footer">
+    <footer class="footer section">
       <div class="container">
         <div class="main-foot-box">
           <a href="./index.html" class="navigation-logo link"
@@ -417,6 +422,72 @@
         </div>
       </div>
     </footer>
+    <!-- mobile-menu -->
+    <div class="mobile-menu js-menu-container" >
+      <button class="modal-close js-close-menu" >
+          <svg class="modal-icon">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      <ul class="mobi-list list">
+        <li class="mobi-item">
+          <a href="./index.html" class="mobi-link link">Studio</a>
+        </li>
+        <li class="mobi-item">
+          <a href="./portfolio.html" class="mobi-link link">Portfolio</a>
+        </li>
+        <li class="mobi-item">
+          <a href="" class="mobi-link link">Contacts</a>
+        </li>
+      </ul>
+      <div class="container-adress">
+        <address class="mobi-adress">
+          <ul class="mobi-adress-list list">
+            <li class="mobi-adress-item">
+              <a href="tel:+110001111111" class="mobi-tel link"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mobi-adress-item">
+              <a href="mailto:info@devstudio.com" class="mobi-email link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
+
+        <ul class="team-soc-list list">
+          <li class="team-soc-item">
+            <a class="team-soc-link" href="">
+              <svg class="team-soc-icon">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="team-soc-item">
+            <a class="team-soc-link" href="">
+              <svg class="team-soc-icon">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="team-soc-item">
+            <a class="team-soc-link" href="">
+              <svg class="team-soc-icon">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="team-soc-item">
+            <a class="team-soc-link" href="">
+              <svg class="team-soc-icon">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -430,7 +501,7 @@
 
         <form class="form-modal">
           <label class="field-form">
-            <span class="input-name">Name</span> 
+            <span class="input-name">Name</span>
             <span class="input-wrap">
               <input class="input" type="text" name="username" />
               <svg class="input-icon">
@@ -440,7 +511,7 @@
           </label>
 
           <label class="field-form">
-            <span class="input-name">Phone</span> 
+            <span class="input-name">Phone</span>
             <span class="input-wrap">
               <input class="input" type="tel" name="tel" />
               <svg class="input-icon">
@@ -450,7 +521,7 @@
           </label>
 
           <label class="field-form">
-            <span class="input-name">Email</span> 
+            <span class="input-name">Email</span>
             <span class="input-wrap">
               <input class="input" type="email" name="email" />
               <svg class="input-icon">
@@ -460,16 +531,22 @@
           </label>
 
           <label class="field-form">
-            <span class="input-name">Comment</span> 
-              <textarea class="input-textarea"  name="comment" placeholder="Text input"></textarea>
+            <span class="input-name">Comment</span>
+            <textarea
+              class="input-textarea"
+              name="comment"
+              placeholder="Text input"
+            ></textarea>
           </label>
 
           <label class="checkbox-field">
-            <input class="visually-hidden" type="checkbox" name="consent">
+            <input class="visually-hidden" type="checkbox" name="consent" />
             <svg class="icon">
               <use href="./images/icons.svg#icon-click"></use>
             </svg>
-            <span class="checkbox-label">I accept the terms and conditions of the </span>
+            <span class="checkbox-label"
+              >I accept the terms and conditions of the
+            </span>
             <a class="link-form" href="">Privacy Policy</a>
           </label>
 
@@ -479,5 +556,6 @@
     </div>
     <!-- script -->
     <script src="./modal.js"></script>
+    <script src="./menu.js"></script>
   </body>
 </html>
