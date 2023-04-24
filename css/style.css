@@ -401,9 +401,7 @@ a {
   position: absolute;
   top: 24px;
   right: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 8px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -423,6 +421,10 @@ a {
 }
 
 .modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: 8px;
   max-height: 8px;
   fill: #000;
@@ -747,9 +749,13 @@ a {
 
 .team-item {
   background-color: var(--color-white);
-  width: 264px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 296px) {
+  .team-item {
+    width: 264px;
+  }
 }
 @media screen and (max-width: 767px) {
   .team-item {
@@ -925,9 +931,8 @@ a {
   width: 100vw;
   height: 100vh;
   background-color: #ffffff;
-  padding: 40px;
-  padding-right: 35px;
-  transform: translateX(100%);
+  padding: 80px 35px 40px 40px;
+  transform: translateX(200%);
   transition: transform 150ms linear;
 }
 @media screen and (max-height: 520px) {
@@ -985,6 +990,11 @@ a {
   .container-adress .team-soc-list {
     gap: 20px;
   }
+}
+
+.mobile-menu .team-soc-icon {
+  width: 24px;
+  height: 24px;
 }
 
 /* footer */
@@ -1188,19 +1198,63 @@ a {
 
 /* portfolio */
 .examples {
-  padding: 96px 0 120px 0;
+  padding: 48px 0;
+}
+@media screen and (min-width: 768px) {
+  .examples {
+    padding: 64px 0 96px 0;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .examples {
+    padding: 96px 0 120px 0;
+  }
 }
 
+@media screen and (min-width: 428px) and (max-width: 767px) {
+  .examples .container {
+    width: 428px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .examples .container {
+    width: 768px;
+  }
+}
+
+.examples-list {
+  column-gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 427px) {
+  .examples-list {
+    column-gap: 12px;
+    row-gap: 10px;
+    width: 224px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 428px) and (max-width: 767px) {
+  .examples-list {
+    width: 270px;
+    margin-bottom: 48px;
+    row-gap: 16px;
+  }
+}
 @media screen and (min-width: 768px) {
   .examples-list {
     display: flex;
     justify-content: center;
-    margin-bottom: 72px;
+    margin-bottom: 64px;
   }
 }
-
-.examples-item:not(:last-child) {
-  margin-right: 24px;
+@media screen and (min-width: 1158px) {
+  .examples-list {
+    margin-bottom: 72px;
+  }
 }
 
 .example-btn {
@@ -1212,6 +1266,11 @@ a {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 767px) {
+  .example-btn {
+    padding: 8px 16px;
+  }
+}
 
 .example-btn:hover,
 .example-btn:focus {
@@ -1221,21 +1280,67 @@ a {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.examples-work-list {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 48px;
-  column-gap: 24px;
+@media screen and (min-width: 768px) {
+  .examples-work-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) {
+  .examples-work-list {
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .examples-work-list {
+    row-gap: 48px;
+    column-gap: 24px;
+  }
 }
 
 .examples-work-item {
-  flex-basis: calc((100% - 48px) / 3);
+  width: 250px;
+}
+@media screen and (max-width: 427px) {
+  .examples-work-item {
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+}
+@media screen and (min-width: 428px) {
+  .examples-work-item {
+    width: 396px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .examples-work-item {
+    width: 356px;
+  }
+}
+@media screen and (min-width: 428px) and (max-width: 768px) {
+  .examples-work-item {
+    margin: 0 auto;
+  }
+  .examples-work-item:not(:last-child) {
+    margin-bottom: 48px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .examples-work-item {
+    width: 360px;
+  }
 }
 
 .examples-work-link {
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.visually-shift img {
+  width: 100%;
+  height: 100%;
 }
 
 .examples-work-link:is(:hover, :focus) {
