@@ -54,10 +54,6 @@ p {
 @media screen and (min-width: 1158px) {
   .container {
     padding: 0 15px;
-  }
-}
-@media screen and (min-width: 1158px) {
-  .container {
     width: 1158px;
   }
 }
@@ -1403,9 +1399,4 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-cloud);
-}
-
-.volter {
-  display: none;
-  box-sizing: border-box;
 }
